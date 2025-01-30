@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 
 
-export async function GET() {
+export async function GET(request: Request) {
     return new Promise((resolve, reject) => {
         db.get(
             "SELECT * FROM words WHERE date_of_display = DATE('now')",
