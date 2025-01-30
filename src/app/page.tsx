@@ -40,10 +40,6 @@ export default function Home() {
       const url = `https://dictionary-data-api.p.rapidapi.com/definition/${wordtosearch}`;
       const options = {
         method: 'GET',
-        headers: {
-          'x-rapidapi-key': '178546401fmsh379ab32fcb4716cp1ac68ajsnbb25e1e0686e',
-          'x-rapidapi-host': 'dictionary-data-api.p.rapidapi.com'
-        }
       }
       try {
         const response = await fetch(url, options)
