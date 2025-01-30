@@ -17,7 +17,7 @@ export async function GET() {
 
                 db.get(
                     "SELECT * FROM words WHERE date_of_display is NULL ORDER BY RANDOM() LIMIT 1",
-                    (err, newWord) => {
+                    (err, newWord: {id: string}) => {
                         if (err) {
                             return reject(NextResponse.json({ error: err }, { status: 400 }))
                         } 
